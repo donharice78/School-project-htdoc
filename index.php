@@ -301,7 +301,7 @@
 
 
     <!-------------------   Javascript for Toggle Menu ----------------------->
-    <script src="/js/index.js"></script>
+    <script src="index.js"></script>
 
 
 

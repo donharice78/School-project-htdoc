@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 
 <body>
-    <section class="aboutUs-header">
+    <section class="espace-header">
         <nav class="logo">
             <a href="index.html"><img src="img/Ecole DHN red.png" alt=""></a>
             <div class="nav-links" id="navLinks">
@@ -74,43 +74,32 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         <!-------------------   Espace ----------------------->
 
-<section>
+<section class="espace">
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form>
+        <h3>Login Here</h3>
 
-
-
-
-
-    <div class="espace-container">
-       <div class="box">
-        <!------------------ Login Box --------------------->
-        <div class="box-login" id="login">
-
-            <div class="top-header">
-                <h3>Hello, Again</h3>
-                <small>We are happy to have you back.</small>
-            </div>
-
-            <?php if ($is_invalid) : ?>
-        <em>Invalid login</em>
-    <?php endif; ?>
-
-            <form action="session.php" method="post">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
+        <label for="username">Username</label>
+        <input type="text" placeholder="Email or Phone" id="username">
 
         <label for="password">Password</label>
-        <input type="password" name="password" id="password" value="<?= htmlspecialchars($_POST["password"] ?? "") ?>" >
+        <input type="password" placeholder="Password" id="password">
 
-        <button>Login</button>
-        <a href="signUp.html">signup</a></p>
-
-
+        <button>Log In</button>
+      <button>Sign Up</button>
+        <div class="social">
+          <div class="go"><i class="fab fa-google"></i>  Google</div>
+          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+        </div>
     </form>
-              
-        </div>
-        </div>
 
-     </div>
+</section>
+</body>
+</html>
+
    
 </body>
 </section>
@@ -163,6 +152,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </div>
         </div>
     </footer>
+
+
+        <!-------------------   Javascript for Toggle Menu ----------------------->
+        <script src="/js/index.js"></script>
+
 
 </body>
 
