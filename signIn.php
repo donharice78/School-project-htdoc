@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($user) {
 
-        if (password_verify($_POST["password"], $user["password_hash"]))
+        if (password_verify($_POST["password"], $user["password"]))
             session_start();
 
             session_regenerate_id();

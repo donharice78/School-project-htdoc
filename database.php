@@ -13,7 +13,7 @@ $password = "";
 //    exit(); 
 
 
-// }
+//  }
 
 $mysqli = new mysqli(
     hostname: $host,
@@ -27,3 +27,9 @@ if ($mysqli->connect_error) {
 }
 
 return $mysqli;
+
+// if ($con) {
+//     echo 'connected';
+//   } else {
+//     echo 'not connected';
+//   }

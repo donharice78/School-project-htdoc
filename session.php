@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 if (isset($_SESSION["user_id"])) {
     $mysqli = require("database.php");
     $sql = "SELECT * FROM user WHERE id = {$_SESSION ["user_id"]}";
@@ -36,7 +37,7 @@ if (isset($_SESSION["user_id"])) {
 
 
         <?php else: ?>
-           <p><a href="login.php">login</a> or <a href="signUp.html">signup</a></p> 
+           <p><a href="signin.php">login</a> or <a href="signUp.html">signup</a></p> 
     
     <?php endif; ?>
 

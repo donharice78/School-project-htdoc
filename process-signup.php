@@ -31,7 +31,7 @@ $mysqli = require("database.php");
 
 
 
-$sql = "INSERT INTO user (name, email, password_hash) VALUES (?,?,?) ";
+$sql = "INSERT INTO user (name, email, password) VALUES (?,?,?) ";
 
 
 $stmt=$mysqli->stmt_init();
