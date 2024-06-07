@@ -18,13 +18,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($user) {
 
-        if (password_verify($_POST["password"], $user["password_hash"]))
+        if (password_verify($_POST["password"], $user["password"]))
             session_start();
 
             session_regenerate_id();
         $_SESSION["user_id"] = $user["id"];
         header("Location:session.php");
-        exit;
+
+        die;
     }
 
     $is_invalid = true;
@@ -78,25 +79,37 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <div class="background">
         <div class="shape"></div>
         <div class="shape"></div>
+        
     </div>
-    <form>
-        <h3>Login Here</h3>
+    
+        
+    <form action="" method="post">
+    <h3>Login Here</h3>
+    <?php if ($is_invalid) : ?>
+        <em>Invalid Email</em>
+     <?php endif; ?>
 
-        <label for="username">Username</label>
-        <input type="text" placeholder="Email or Phone" id="username">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" value="<?=htmlspecialchars($_POST["email"] ?? "")?>">
 
         <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password">
+        <input type="password" placeholder="Password" id="password" name="password">
 
         <button>Log In</button>
-      <button>Sign Up</button>
-        <div class="social">
-          <div class="go"><i class="fab fa-google"></i>  Google</div>
-          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
-        </div>
+        
+        <button class="SignUp" ><a href="signUp.php">Sign Up</a></button>
+       
+       
+
     </form>
+   
+
+ 
+    
 
 </section>
+
+
 </body>
 </html>
 
@@ -153,10 +166,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </div>
     </footer>
 
+<!-------------------   Javascript for Toggle Menu ----------------------->
+<script src="/js/index.js"></script>
 
-        <!-------------------   Javascript for Toggle Menu ----------------------->
-        <script src="/js/index.js"></script>
-
+        
 
 </body>
 

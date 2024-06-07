@@ -1,0 +1,355 @@
+
+.espace-header{
+    min-height: 51vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(4, 9, 3, 0.418),
+     rgba(4, 9, 3, 0.418)),url(../School-project-htdoc/img/Nice2.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+/*
+[0]GENERAL
+[1]MENU
+[2]MAIN CONTENT
+[3]MEDIA QUERIES
+*/
+
+/*[0]GENERAL*/
+.espace{
+    height: 80vh;
+    top: 50%;
+    
+   
+}
+
+  
+  a{
+      text-transform: uppercase;
+      color:#fff;
+  }
+  
+  a:hover{
+      color:#fff;
+      text-decoration: none;
+      text-shadow: 1px 1px 15px #fff;
+  }
+  
+  /*[1]MENU*/
+  #menu{
+      color:#fff;
+      transition: 0.5s ease;
+      box-sizing: border-box;
+      background-color: #1A6E88;
+      padding-top:5%;
+      padding: 1%;
+      text-align: left;
+      position: absolute;
+      right: -15%;
+      top: 390px;
+      height: 83.4%;
+      width: 20%;
+  }
+  
+  #menu i{
+      font-size: 25px;
+  }
+  
+  .fas{
+      padding: 5%;
+      display: block;
+  }
+  #menu span{
+      color:transparent;
+      padding: 5%;
+      padding-left: 20%;
+      font-size: 20px;
+  }
+  .fa-bars{
+      padding-top: 15%;
+  }
+  .menuExpand{
+      position: relative;
+      top:0;
+      right:0!important;
+  }
+  .whiteText{
+      color:#fff !important;
+  }
+  
+  
+  /*[2]MAIN CONTENT*/
+  #topLeft,
+  #topRight,
+  #bottomLeft,
+  #bottomRight{
+      box-shadow: -5px 10px 15px #2A3D4E;
+      margin-top: 10px;
+      width: 35%;
+      background-color: #1A6E88;
+      padding: 3%;
+  }
+  
+  #studentImage{
+      width: 200px;
+      height: auto;
+      padding:0;
+  }
+  
+  #topLeft{
+      max-height: 300px;
+      position: relative;
+      top: 1%;
+      left:10%;
+  }
+  #topRight{
+      max-height:300px;
+      position: absolute;
+      top:52%;
+      left: 50%;
+  }
+  
+  .progress{
+      height: 40px;
+  }
+  
+  #bottomLeft{
+      position: relative;
+      top: 10%;
+      left:10%;
+      max-height:300px;
+  }
+  
+  #bottomRight{
+      position: absolute;
+      top:85%;
+      padding: 1%;
+      left: 50%;
+  }
+  
+  
+  #studentProgress{
+      padding: 2%;
+  }
+  #timeDiv{
+      text-align: right;
+  }
+  .btn{
+      color:#fff;
+      margin-top: 3%;
+      background-color: #1A6E88;
+      border-radius: 5px;
+      border:2px solid #00BCD4; 
+  }
+  .btn:hover{
+      background-color:#00BCD4;
+  }
+  
+  /*[3]MEDIA QUERIES*/
+  @media only screen and (max-width: 1250px){
+      #bottomRight{
+          top:45%;
+      }
+  }
+  @media only screen and (max-width: 1150px){
+      #menu{
+          right:-13%;
+      }
+  }
+  @media only screen and (max-width: 890px){
+      #bottomRight{
+          padding: 1%;
+          top:40%;
+      }
+          h4{
+          font-size: 18px;
+      }
+      h5{
+          font-size: 16px;
+      }
+      h6{
+          font-size: 14px;}
+  }
+  
+  @media only screen and (max-width: 780px){
+      #bottomRight{
+          top:38%;
+          padding: 3%;
+      }
+  }
+  @media only screen and (max-width: 750px){
+      #menu span {
+          font-size: 18px;
+      }
+  }
+  @media only screen and (max-width: 700px){
+      #menu{
+          right:-12%;
+      }
+      #menu span{
+          font-size: 16px;
+      }
+  }
+  @media only screen and (max-width: 680px){
+      #topRight,
+      #bottomRight{
+          width: 300px;
+      }
+      #menu span{
+          font-size: 16px;
+      }
+      .bottomLeft{
+          top:320px;
+      }
+  }
+  @media only screen and (max-width: 650px){
+      #menu span{
+          font-size: 14px;
+      }
+  }
+  @media only screen and (max-width: 625px){
+      #menu span{
+          font-size: 14px;
+      }
+      h4{
+          font-size: 20px;
+      }
+      h5{
+          font-size: 18px;
+      }
+      h6{
+          font-size: 16px;
+      }
+      #bottomRight{
+          top:40%;
+      }
+      #studentImage{
+          width:150px;
+          padding: 0;
+      }
+      #bottomLeft{
+          top:300px;
+      }
+  }
+  @media only screen and (max-width: 580px){
+      #menu span{
+          font-size: 12px;
+      }
+  }
+  /*major styling change to fix 550 and smaller*/
+  @media only screen and (max-width: 550px){
+      #topLeft,
+      #bottomLeft{
+      left:2%;
+      }
+      #topRight,
+      #bottomRight{
+          left:40%;
+          width:250px;
+      }
+      #bottomRight{
+          top:30%;
+      }
+      #topRight{
+          text-align: center;
+      }
+      .progress{
+          margin:0 auto;
+          height: 20px;
+          width:50%;
+      }
+      .btn{
+          border:none;
+          height:20px;
+      }
+      .btn:hover{
+          background-color:initial;
+      }
+  }
+  @media only screen and (max-width: 530px){
+      #menu{
+          right:-15%;
+          width:25%;
+      }
+  }
+  /*major change in styling for mobile devices*/
+  @media only screen and (max-width: 450px){
+      #studentImage{
+          display: none;
+      }
+      #topLeft,
+      #topRight,
+      #bottomLeft,
+      #bottomRight{
+          display: block;
+          width:350px;
+          position: absolute;
+          left:5%;
+          margin:0 auto;
+      }
+      /*student details*/
+      #topLeft{
+          text-align: center;
+          top:3%;
+          padding:2%;
+          height:70px;
+      }
+      /*menu/selector*/
+      #bottomLeft{
+          text-align: center;
+          top:245px;
+          height: 50px;
+      }
+      /*progress and dashboard*/
+      #topRight{
+          padding-bottom: 0;
+          top:85px;
+          height:150px;
+      }
+      /*subject details*/
+      #bottomRight{
+          margin: 0 auto;
+          text-align: left;
+          padding: 5px;
+          padding-left: 10px;
+          height:230px;
+          top:305px;
+      }
+      #menu{
+          background-color: #3F4C56;
+          height:130px;
+      }
+      h4{
+          font-size: 14px;
+      }
+      h5{
+          font-size: 12px;
+      }
+      h6{
+          font-size: 12px;
+          font-weight: normal;
+      }
+      .btn{
+          border:none;
+          font-size: 12px;
+          height: 16px;
+      }
+      .progress{
+          height: 20px;
+      }
+      #menu{
+          width:25%;
+          right:-11%;
+      }
+      #menu span{
+          color:transparent;
+      }
+  }
+  @media only screen and (max-width: 415px){
+      #menu{
+          right:-13%;
+          width:30%;
+  
+      }
+  }
